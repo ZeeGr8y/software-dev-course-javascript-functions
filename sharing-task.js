@@ -35,7 +35,12 @@ reusable functions that solve specific tasks. This activity encourages:
 // 2. Format the output string properly.
 // 3. Capitalize the role if needed.
 // 4. Return the result.
-
+function genBadge(name, role) {
+    console.log(`Name:${name}, Role:${role}`);
+}
+genBadge("Alice", "Admin");
+genBadge("Bob", "Assistant");
+genBadge("Charlie", "Speaker");
 
 // ============================================
 // 🧩 Task 2: Calculate Event Cost
@@ -51,6 +56,14 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. If so, apply a 10% discount.
 // 4. Return the final total.
 
+function calculateTotalCost(numAttd, cosPer) {
+    let total = numAttd * cosPer;
+    if (numAttd > 100) {
+        total = total * 0.9;
+    }
+    return total;
+}
+console.log("Total Cost: " + calculateTotalCost(120, 50));
 
 // ============================================
 // 🧩 Task 3: Validate Email
@@ -64,6 +77,21 @@ reusable functions that solve specific tasks. This activity encourages:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
 
+const readline = require('readline-sync');
+
+function getEmailInput(emailStr) {
+    console.log("Each email address must contain an @ and .");
+    let email = readline.question(emailStr);
+
+    if (email.includes("@") && email.includes(".")) {
+        console.log("True: Valid email address!");
+    } else {
+        console.log("False: Invalid email address!");
+    }
+    return email;
+}
+let email = getEmailInput("What is your email address?");
+console.log("You Entered:" + email);
 
 // ============================================
 // 🧠 Collaborative Steps

@@ -50,7 +50,7 @@ console.log("The product of 5 and 10 is " + product);
 let names = ["Alice", "Bob", "Charlie"];
 console.log("Names in the list:");
 for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
+   console.log(names[i]);
 }
 
 /*
@@ -72,3 +72,36 @@ for (let i = 0; i < names.length; i++) {
 */
 
 // ✅ Your refactored code goes below this line!
+// Script 1 - Greeting multiple users
+function greet(name) {
+   return `Welcome ${name}`;
+}
+console.log(greet("Alice!"));
+console.log(greet("Charlie!"));
+console.log(greet("Bob!"));
+
+// Script 2 - Sum calculation
+function sumNums(num1, num2) {
+   //let num1 = 5, num2 = 10;
+   let sum = num1 + num2;
+   return sum;
+}
+console.log("The sum of 5 and 10 is: " + sum);
+
+// Script 3 - Product calculation
+function multiply(num1, num2) {
+
+   return num1 * num2;
+}
+let prodNum = multiply(5, 10);
+console.log("The product of 5 and 10 is: " + prodNum);
+
+// Script 4 - Print names from a list
+function printNames(arr) {
+   console.log("Names in the list:");
+   for (let i = 0; i < names.length; i++) {
+      console.log(nameArray[i]);
+   }
+}
+let nameArray = ["Alice", "Bob", "Charlie"];
+printNames(nameArray);
